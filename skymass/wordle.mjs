@@ -46,6 +46,18 @@ sm.page("/wordle", (ui) => {
         tg: "", not_cleared: true
     }));
 
+    ui.md`
+    # Wordle Unlimited
+
+    Enter a 5 letter word and click Submit.
+
+    Green letters are placed properly in the final word.
+
+    Yellow letters exist in the final word, but are in the wrong position.
+
+    Try to guess the word within 6 attempts. Good luck!
+    `
+
     ui.txt("word", `${tg}`, {size: "xl", color: "blue", align: "center"});
 
     const name = ui.string("guess", {
